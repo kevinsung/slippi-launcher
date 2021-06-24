@@ -46,7 +46,7 @@ export const DolphinSettings: React.FC<{ dolphinType: DolphinLaunchType }> = ({ 
   const classes = useStyles();
   const { addToast } = useToasts();
   const openDolphinDirectoryHandler = async () => {
-    shell.openItem(dolphinPath);
+    shell.openPath(dolphinPath);
   };
   const configureDolphinHandler = async () => {
     console.log("configure dolphin pressed");
