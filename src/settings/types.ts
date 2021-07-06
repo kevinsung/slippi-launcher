@@ -17,6 +17,7 @@ export type AppSettings = {
   connections: StoredConnection[];
   settings: {
     isoPath: string | null;
+    isoId: string | null;
     rootSlpPath: string;
     spectateSlpPath: string;
     netplayDolphinPath: string;

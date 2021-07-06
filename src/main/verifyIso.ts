@@ -1,5 +1,7 @@
+import { settingsManager } from "@settings/settingsManager";
 import { IsoValidity } from "common/types";
 import crypto from "crypto";
+import log from "electron-log";
 import fs from "fs";
 
 import { fileExists } from "./fileExists";
@@ -111,6 +113,8 @@ export async function verifyIso(isoPath: string): Promise<IsoValidity> {
             resolve(IsoValidity.INVALID);
             return;
           }
+          const id = data.subarray(0, 6).toString();
+          settingsManager.setIsoId(id).catch(log.error);
         }
 
         hash.update(data);

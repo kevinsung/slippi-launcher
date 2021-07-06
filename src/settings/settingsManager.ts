@@ -49,6 +49,10 @@ export class SettingsManager {
     await this._set("settings.isoPath", isoPath);
   }
 
+  public async setIsoId(id: string): Promise<void> {
+    await this._set("settings.isoId", id);
+  }
+
   public async setRootSlpPath(slpPath: string): Promise<void> {
     await this._set("settings.rootSlpPath", slpPath);
   }
