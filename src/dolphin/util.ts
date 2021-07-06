@@ -167,8 +167,6 @@ async function bootToCss(globalIniPath: string, localIniPath: string, enable: bo
     geckoCodes[bootCodeIdx].enabled = enable;
   }
 
-  log.debug(geckoCodes);
-
   saveCodes(localIni, geckoCodes);
 
   localIni.save(localIniPath);
